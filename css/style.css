@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins',sans-serif;
+    /* box-sizing: border-box; */
 }
 .text-right{
     text-align: right;
@@ -23,6 +24,7 @@ a:hover{
 .navbar-container span{
     font-weight: bolder;
     font-size: 24px;
+    
 }
 
  /*css navbar */
@@ -34,14 +36,13 @@ a:hover{
     width:90%;
     margin: 0 auto;
     display: flex;
-    border:2px solid black;
+    /* border:2px solid black; */
     margin-bottom: 20px;
     justify-content: space-between;
 }
 
 .logo{
-    width: 11%;
-    
+    width: 100px;
 }
 
 .img-logo{
@@ -52,14 +53,14 @@ a:hover{
 
 .menu{
     width: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 .menu ul{
     list-style-type: none;
 }
 .menu ul li{
     display: inline-block;
-    padding:2%;
+    padding:1%;
     font-weight: 450;
     margin-right:30px;
 }
@@ -79,6 +80,18 @@ a:hover{
 }
 
 /* ****************** */
+@media screen and (max-width:530px){
+    .feature-container .title button{
+        border: 2px solid #FF5C00;
+        padding:12px;
+        font-size: 23px;
+    }
+    .navbar-container span{
+        font-weight: bold;
+        font-size: 10px;
+    }
+}
+
 @media screen and (max-width:819px) {
     
     .menu ul {
@@ -109,8 +122,8 @@ a:hover{
 
     #icon-menu{
         display: block;
-        width:20px;
-        height:20px;
+        width:25px;
+        height:25px;
     }
     
     .feature-container{
@@ -134,12 +147,13 @@ a:hover{
     }
 
     .feature-img .title p{
-        font-size: 30px;
+        font-size: 27px;
         
     }
 
     .logo{
         width: 15%;
+        /* width: 20%; */
     }
 
     .circles .circleTwo .img-plate1{
@@ -175,20 +189,25 @@ a:hover{
         margin:-22px;
     }
 
-    .feature-img .split:nth-of-type(2){
-        background-color: #FF5C00;
-        
-    }
     .feature-img .title p{
-
         font-size: 25px;
     }
 
     .feature-img .split:nth-of-type(2){
-        /* background-color: #28282B; */
-        /* padding: 0 35px; */
+        /* background-color: #FF5C00; */
+        padding: 0 45px;
         display: flex;
         flex-direction: row-reverse;
+    }
+
+    .feature-container .title button{
+        border: 1.5px solid #FF5C00;
+        padding:10px;
+        font-size: 20px;
+    }
+    .navbar-container span{
+        font-weight: bold;
+        font-size: 10px;
     }
 
 }
@@ -231,9 +250,11 @@ a:hover{
     font-family: 'Zen Maru Gothic',sans-serif ;
     font-size: 40px;
     font-weight: bolder;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
     color: #FF5C00;
 }
+
+
 
 .title button{
     background-color: transparent;
@@ -244,7 +265,19 @@ a:hover{
     border: 2px solid #FF5C00;
     padding:15px;
     margin: 20px 0px;
+    /* transition start here */
+    transition: all 0.5s;
+    box-shadow: 0 10px 20px -8px rgba(0,0,0,.7);
 }
+
+.title button:hover{
+    cursor: pointer;
+    padding-right: 8px;
+    padding-left: 24px;
+    
+}
+
+
 /* css for Circle around the image */
 
 .circles{
