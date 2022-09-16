@@ -9,6 +9,10 @@
     font-family: 'Poppins',sans-serif;
     /* box-sizing: border-box; */
 }
+:root {
+    --swiper-theme-color: #FF5301!important;
+}
+
 .text-right{
     text-align: right;
 }
@@ -90,6 +94,10 @@ a:hover{
     .navbar-container span{
         font-weight: bold;
         font-size: 10px;
+    }
+
+    .textContainer h1{
+        font-size: .9rem !important;
     }
 }
 
@@ -254,7 +262,29 @@ a:hover{
     .card-image .card-img{
         border-radius: 50px 0 50px 0 !important;
     }
+        
+    /* Customer Review*/
+    .review-container .cus-image{
+        width:100px;
+        height:100px;
+    }
 
+    .review-container .customer-review-container{
+        width: 95% !important;
+    }
+    .review-container .customer-review-container .customer-card .vertical-line{
+        width:8px;  
+     }
+    .customer-card .cus-description{
+        font-size: 12px;
+        width: 15rem !important;
+
+     }
+
+    body .textContainer h1{
+        font-size: 1.5rem;
+    }
+    
 
 }
 
@@ -297,6 +327,23 @@ a:hover{
         font-size: 10px;
     }
 
+}
+
+@media screen and (max-width:1000px){
+    .footer footer{
+        display: block !important;
+    }
+
+    .footer .insta,
+    .footer .newsLetter,
+    .footer .openHours-div,
+    .footer .about-socialMedia{
+        width:auto !important;
+    }
+    .footer .credit{
+        margin-top: 40px ;
+        padding-top: 40px;
+    }
 }
 
 
@@ -813,8 +860,6 @@ section{
 .chefCard-content .name{
     color:#FF5301;
     font-size: 18px;
-    
-    
 }
 .chefCard-content .position{
     color:#808080;
@@ -834,20 +879,32 @@ section{
     background-position: center;
 }
 
+.review-container .content-holder::before{
+    content: "";
+    width: 100%;
+    height:30rem;
+    background-color: #00000090;
+    position: absolute;
+}
+
 .review-container{
     width:100%;
     height:30rem;
-    /* background-color: #28282B; */
-    
+    /* background-color: #28282B; */ 
 }
 .review-container .customer-review-container{
-    background-color: #00000090;
+    /* background-color: #00000090; */
     height: 100%;
-    width: 100%;
-    position: relative;
-
+    width: 50%;
+    position: relative; 
 }
 
+.review-container .customer-review-container:hover{
+    cursor: grab;
+}
+.review-container .customer-review-container:active{
+    cursor: grabbing;
+}
 
 .cus-image{
     width:150px;
@@ -860,8 +917,12 @@ section{
     border-radius: 50%;
  }
 
+ .customer-review-content{
+    width: 100% !important;
+ }
+
  .customer-card{
-    width: 50% !important;
+    width: 100% !important;
     height: 80% !important;
     background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
     backdrop-filter: blur(40px);
@@ -883,9 +944,15 @@ section{
  }
 
  .customer-card .cus-description{
-    width: 23rem;
-    
+    width: 23rem;   
  }
+ .customer-card .cus-description span{
+    color:#FF5301;
+ }
+ .customer-card .cus-description p{
+    color:#fff;
+ }
+
  .customer-card .image-name-title{
     display: flex;
     flex-direction: column;
@@ -899,3 +966,161 @@ section{
  .customer-card .image-name-title .title{
     color:#808080;
  }
+
+ .swiper-pagination-bullet{
+    border:2px solid #fff;
+ }
+
+ .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal{
+    position: absolute;
+    text-align: center;
+  }
+ 
+.textContainer{
+    width:100%;
+    height:13rem;
+    background-color: #FF5301;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.textContainer h1{
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+.textContainer .btn{
+    background-color: transparent;
+    padding:8px 30px;
+    margin-top: 20px;
+    border:1px solid #fff;
+    color:#fff;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+.textContainer .btn:hover{
+    cursor:pointer;
+}
+/* footer CSS */
+
+.footer{
+    background-color: #28282B;
+    margin-bottom: 0;
+    padding: 50px 30px 10px 30px;
+    
+}
+.insta .insta-image{
+    width:300px;
+    height:200px;
+}
+.insta .insta-image .insta-img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+
+.footer footer{
+    width:auto;
+    height:auto;
+    background-color: #28282B;
+    /* background-color: #E5AB8E; */
+    display: flex;
+    /* display: block; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: row;
+    justify-content: space-around; */
+}
+
+
+footer h3{
+    margin-bottom: 20px;
+    color:#fff;
+}
+.footer .about-socialMedia{
+    width:25rem;
+
+}
+.footer .about-socialMedia h3{
+    font-size: 1.5rem;
+}
+.footer .about-socialMedia p {
+    width:70%;
+    font-size: 14px;
+    margin-bottom: 30px;
+    color:#808080;
+}
+
+.footer .about-socialMedia .socialMedia{
+    font-size: 35px;
+    color:#FF5301;
+}
+.footer .about-socialMedia .socialMedia i{
+    margin-right:10px;
+}
+
+.footer .openHours-div{
+    width:25rem;
+}
+
+.footer .openHours-div .container-openHours{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* width:70%; */
+}
+.footer .openHours-div .container-openHours span{
+    display: inline-block;
+    margin-bottom: 7px;
+    color:#808080;
+}
+
+.footer .openHours-div .container-openHours div:last-of-type{
+    float: right;
+    margin-left: 30px;
+}
+
+.footer .insta{
+    width:25rem;
+}
+.footer .newsLetter{
+    width:25rem;
+}
+.footer .newsLetter div{
+    height:15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer .newsLetter div p{
+    color:#808080;
+    margin-bottom: 10px;
+}
+
+.footer .newsLetter div input[type="text"]{
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: transparent;
+    border:1px solid #fff;
+    border-radius: 10px;
+}
+.footer .newsLetter div button{
+    padding: 15px;
+    background-color: #FF5301;
+    border:none;
+    outline: none;
+    border-radius: 10px;
+    /* box-shadow: 5px 20px 100px #fff; */
+}
+.footer .newsLetter div button:hover{
+    cursor: pointer;
+}
+.footer p,
+.footer p a{
+    color:#808080;
+}
+

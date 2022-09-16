@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -269,7 +271,7 @@
     <section>
         <div class="review-container"> 
             <div class="content-holder"> <!-- image bg -->
-            <div class="customer-review-container swiper mySwiper2"> <!-- here were the black bg -->
+                <div class="customer-review-container swiper mySwiper2"> <!-- here were the black bg -->
                     <div class="customer-review-content swiper-wrapper">
                         <div class="customer-card swiper-slide"> <!--here were the card will be duplicated-->
                             <div class="image-name-title">
@@ -281,7 +283,7 @@
                             </div>
                             <div class="vertical-line"></div>
                             <div class="cus-description">
-                                <h3>Happy <span>Customer</span></h3>
+                                <h2>Happy <span>Customer</span></h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatem dolore enim asperiores adipisci amet natus distinctio doloribus aliquam voluptate!</p>
                             </div>
                         </div>
@@ -295,7 +297,7 @@
                             </div>
                             <div class="vertical-line"></div>
                             <div class="cus-description">
-                                <h3>Happy <span>Customer</span></h3>
+                                <h2>Happy <span>Customer</span></h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatem dolore enim asperiores adipisci amet natus distinctio doloribus aliquam voluptate!</p>
                             </div>
                         </div>
@@ -309,19 +311,81 @@
                             </div>
                             <div class="vertical-line"></div>
                             <div class="cus-description">
-                                <h3>Happy <span>Customer</span></h3>
+                                <h2>Happy <span>Customer</span></h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatem dolore enim asperiores adipisci amet natus distinctio doloribus aliquam voluptate!</p>
                             </div>
                         </div>
                     </div>
-                    
+                    <div class="swiper-pagination2"></div>
                 </div>
-                
             </div>
-            
         </div>
-        
     </section>
+
+    <div class="textContainer">
+        <h1>We Make Delicious & Nutritious Food</h1>
+        <button class="btn">BOOK A TABLE</button>
+    </div>
+
+    <section class="footer">
+        <footer>
+            <div class="about-socialMedia">
+                <h3>Yummy F<span>oo</span>d</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint id illo harum consequuntur ea quis. Non, iure aliquid! Explicabo, sunt?</p>
+                
+                <div class="socialMedia">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-google-plus-g"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+            <div class="openHours-div">
+                <h3>OPEN HOURS</h3>
+                <div class="container-openHours">
+                    <div>
+                        <span>Monday</span> <br>
+                        <span>Tuesday</span> <br>
+                        <span>Wednesday</span> <br>
+                        <span>Thursday</span> <br>
+                        <span>Friday</span> <br>
+                        <span>Saturday</span> <br>
+                        <span>Sunday</span>
+                    </div>
+                    <div>
+                        <span>9:00 - 24:00</span> <br>
+                        <span>9:00 - 24:00</span> <br>
+                        <span>9:00 - 24:00</span> <br>
+                        <span>9:00 - 24:00</span> <br>
+                        <span>9:00 - 24:00</span> <br>
+                        <span>9:00 - 24:00</span> <br>
+                        <span>Closed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insta">
+                <h3>INSTAGRAM</h3>
+                <div class="insta-image">
+                    <a href="#" title="instagram"> <img src="/images/Plates12.jpg" alt="Instagram" class="insta-img"> </a>
+                </div>
+
+            </div>
+
+            <div class="newsLetter">
+                <h3>NEWSLETTER</h3>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, modi?</p>
+                    <input type="text" placeholder="Enter email address" class="txtemail">
+                    <button class="btnSubscribe">Subscribe</button>
+                </div>
+            </div>
+        </footer>
+        <div class="credit">
+            <p>All &copy; 2022 <a href="#">Azeddine Taki</a></p>
+        </div>
+    </section>
+
 
 
     <!-- Swiper JS -->
@@ -373,13 +437,17 @@
       });
       var swiper = new Swiper(".mySwiper2", {
         spaceBetween: 30,
-        slidesPerView:2,
-        slidesPerGroup:1,
+       
         centeredSlides: true,
         autoplay: {
           delay: 2500,
           disableOnInteraction: false,
         },
+        pagination: {
+          el: ".swiper-pagination2",
+          clickable: true,
+        },
+        
         
       });
     </script>
